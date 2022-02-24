@@ -1,0 +1,517 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    transition: .2s linear;
+}
+
+/* *********************** 
+        GENERAL
+    **********************
+*/
+h1 {
+    font-family: 'Acme', sans-serif;
+    text-align: center;
+    font-size: 3.5rem;
+    margin: 1rem;
+}
+
+h2 {
+    font-family: 'Acme', sans-serif;
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 1rem;
+}
+
+h3 {
+    font-family: 'Acme', sans-serif;
+    font-size: 1.8rem;
+    margin: 1rem;
+}
+
+p {
+    font-family: 'Oswald', sans-serif;
+}
+
+span {
+    color: black
+}
+.fab {
+    color:black
+}
+
+body {
+    background-image: url("../images/cielo.jpg");
+    background-repeat: no-repeat;
+    background-position: cover;
+}
+
+.Texto__Descriptivo {
+    font-size: 1.5rem;
+    padding: .8rem 1rem;
+}
+
+.Efecto__Hover:hover {
+    font-size: 115%;
+    color: blue;
+}
+
+/* *********************** 
+        ESTRUCTURA 
+    **********************
+*/
+
+.grid-container{
+    display: grid; 
+    grid-template-columns: auto; 
+    grid-template-rows: repeat(3,max-content); 
+    gap: 1rem 1rem; 
+    grid-template-areas: 
+    "cabecera"
+    "main_container"
+    "pie"; 
+}
+
+.menu_container{
+    grid-area: cabecera;
+}
+
+.main_container {
+    grid-area: main_container;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 3rem 2rem;
+    grid-template-areas:
+        "titulo titulo"
+        "descripcion video";
+}
+.titulo{
+    grid-area: titulo;
+}
+
+.descripcion{
+    grid-area: descripcion;
+}
+
+.video{
+    grid-area: video;
+}
+
+.pie{
+    grid-area: pie;
+    background-color: rgb(79 207 206 / 70%);
+}
+
+/* *********************** 
+        HEADER 
+    **********************
+*/
+.Header {
+    position: sticky;
+    top: 0;
+    height: 80px;
+    background-color: rgb(79 207 206 / 70%);
+}
+
+.Header nav {
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Header nav div {
+    display: inline-block;
+}
+
+.Header__Menu {
+    width: 100%;
+}
+.Header__Menu__UL li {
+    display: inline;
+    margin-left: 2rem;
+    top: 23px;
+    align-items: center;
+}
+
+.Header__Menu__UL li a {
+    color: black;
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    display: inline-block;
+    margin-right: 3%;
+    padding-top: 0.6rem;
+}
+
+.Header__Logo {
+    margin-right: 2em;
+}
+
+.Header__Menu__UL li a:hover {
+    font-size: 1.8rem;
+    color: blueviolet;
+}
+
+.Header__Menu__Activo {
+    border-bottom: 5px solid black;
+}
+
+/* *********************** 
+        MAIN 
+    **********************
+*/
+main {
+    padding: 1rem 2rem;
+}
+
+.Principal {
+    display: inline-block;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    
+}
+
+.Principal__Descripcion {
+    display: inline-block;
+    margin-left: 7%;
+    height: max-content;
+    font-size: 1.5rem;
+    background-color: rgb(0 0 0 / 40%);
+    color: white;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.Principal__Video {
+    width: 90%; 
+    margin-right: 7%;
+    display: flex;
+    justify-content: center;
+}    
+
+.Principal__Video iframe {
+    width: 100%;
+    height: auto;
+}
+
+/* *********************** 
+        FOOTER 
+    **********************
+*/
+footer {
+    margin-top: 2rem;
+    display: grid;
+    background-color: rgb(79 207 206 / 70%);
+    grid-template-columns: 20% 25% 30% 25%;
+    grid-template-rows: max-content max-content;
+    gap: 1.5rem 10px;
+    grid-template-areas:
+        "logo redes whatsapp menu"
+        "copyrigth copyrigth copyrigth copyrigth";
+    align-content: center;
+}
+
+.Footer__Logo {
+    margin-left: 7%;
+    grid-area: logo;
+    align-self: center;
+    justify-content: center;
+    display: flex;
+}
+
+.Footer__Logo a img {
+    height: 100px;
+}
+
+.Footer__RedesSociales {
+    padding-left:2.5%; 
+    padding-bottom: 1rem;
+    padding: 1rem 0px 1rem 2.5%;
+    grid-area: redes;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Footer__RedesSociales a {
+    display: inline-block; 
+}
+
+.Footer__RedesSociales ul li a i {
+    margin-top: 1rem;
+}
+
+.Footer__RedesSociales ul li a i span {
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+}
+
+.Footer__Whatsapp {
+    padding-left:2.5%; 
+    grid-area: whatsapp;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Footer__Whatsapp ul li{
+    font-weight: bold;
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+}
+
+.Footer__Whatsapp ul li a i{
+    font-size: 3rem;
+    margin: .3rem 0px;
+    align-self: center;
+}
+
+.Footer__Whatsapp ul li a i:hover {
+    font-size: 3.5rem;
+    color: blue;
+}
+
+.Footer__Menu {
+    padding-left:2.5%; 
+    grid-area: menu;
+    display:grid;
+    align-items: center;
+}
+
+.Footer__Menu ul li{
+    margin-top: .3rem;
+}
+
+.Footer__Menu ul li a{
+    color:black;
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+} 
+
+.Footer__Copyrigth {
+    display: grid;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    grid-area: copyrigth;
+    justify-content: center;
+}
+
+
+/* *********************** 
+        SERVICIOS 
+    **********************
+*/
+.Servicios {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "servicio_header servicio_header servicio_header"
+        "servicio1 servicio2 servicio3";
+}
+
+.Servicios__Header {
+    grid-area: servicio_header;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 0% 3%;
+    
+}
+
+.Servicios__Header h2, .Servicios__Header p{
+    width: 80%;
+    font-size: 1.5rem;
+}
+
+.Servicio1 {
+    grid-area: servicio1;
+}
+
+.Servicio2 {
+    grid-area: servicio2;
+}
+
+.Servicio3 {
+    grid-area: servicio3;
+}
+
+.Servicios div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0% 3%;
+}
+
+.Servicios div p{
+    text-align: center;
+}
+
+.Servicios div img {
+    width: 70%;
+}
+
+/* *********************** 
+        NOSOTROS
+    **********************
+*/
+
+.Nosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.Nosotros img{
+    width: 80%;
+}
+
+.Nosotros p{
+    text-align: center;
+}
+
+/* *********************** 
+        CONTACTO
+    **********************
+*/
+
+.Contacto__Formulario{ 
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Contacto__Formulario label, .Contacto__Formulario input{ 
+    margin: .5rem;
+}
+
+/* *********************** 
+        MOBILE -TABLET
+    **********************
+*/
+
+@media screen and (max-width: 870px){
+    .grid-container {
+        display: grid; 
+        grid-template-columns: auto; 
+        grid-template-rows: repeat(3,max-content); 
+        gap: 1rem; 
+        grid-template-areas: 
+        "cabecera"
+        "main_container"
+        "pie"; 
+    }
+
+    .Header{
+        height: max-content;
+        padding-bottom: .8rem;
+        position:static;
+    }
+
+    .Header nav{
+        display: flex;
+    }
+    
+    .Header__Menu {
+        width: 100%;       
+    }
+
+
+    .Header__Menu__UL {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .Header__Menu__UL li a{
+        margin-top: 1rem;
+    }
+    
+    .Header:hover {
+        height: 400px;
+    }
+    
+    .Header__Logo {
+        float: right;
+    
+    }
+    
+    .Header__Menu__Activo {
+        order: -1;
+        border-bottom: none;
+    }
+
+    .Header__Logo a{
+        display: none;
+    }
+
+    .Principal__Descripcion {
+        display: flex;
+        flex-direction: column;
+        margin: 3% 0px;
+        height: 100%;
+        font-size: 1rem;
+
+        justify-content: center;
+        margin-bottom: 3rem;
+        font-size: .9rem;
+    }
+    .Principal__Video iframe{
+        width: 90%;
+    }
+    .main_container {
+        grid-area: main_container;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 3rem 2rem;
+        grid-template-areas:
+            "titulo"
+            "video"
+            "descripcion";
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .titulo {
+        text-align: center;
+    }
+
+    footer {
+        margin-top: 2rem;
+        display: grid;
+        background-color: rgb(79 207 206 / 70%);
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(5, max-content);
+        gap: .5rem;
+        grid-template-areas:
+            "logo" 
+            "redes" 
+            "whatsapp" 
+            "menu"
+            "copyrigth";
+        align-content: center;
+    }
+
+    .Footer__Menu ul, .Footer__Whatsapp ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Servicios {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: 
+            "servicio_header"
+            "servicio1" 
+            "servicio2" 
+            "servicio3";
+        gap: 1.5rem;
+    }
+}
